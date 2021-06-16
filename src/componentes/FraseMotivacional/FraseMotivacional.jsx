@@ -7,7 +7,7 @@ const FraseMotivacional = (parametros) => {
     return <Card>
         {/* <p className="frase"> */}
         <p>
-           "{parametros.frase}"
+           "{parametros.texto}"
         </p>
         <Rodape autor={parametros.autor} criadaEm={parametros.criadaEm}/>
     </Card> 

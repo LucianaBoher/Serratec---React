@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './estilos.css'
 
-const Formulario = () => {
+const Formulario = ({ aoSalvar }) => {
 
     const [autor, setAutor] = useState('')
     const [texto, setTexto] = useState('')
@@ -18,14 +18,16 @@ const Formulario = () => {
 
     const salvar = (evento) => {
         evento.preventDefault()
-        console.log('Form submetido');
-        console.log(autor);
-        console.log(texto);
-
         const frase = {}
-        frase.autor = autor;
-        frase.texto = texto;
-        console.log(frase);
+        frase.autor = autor
+        frase.texto = texto
+        aoSalvar(frase)
+
+        console.log('Form submetido')
+        console.log(frase)
+
+        setAutor('')
+        setTexto('')
     }
 
 
