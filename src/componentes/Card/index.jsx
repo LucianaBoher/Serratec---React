@@ -1,6 +1,6 @@
 import './card.css'
 
- const Card (parametros) => {
+ function Card (parametros) {
     return <div className="card">
         {parametros.children}
     </div>
